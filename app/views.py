@@ -12,3 +12,11 @@ def index():
     sources = get_news('sources')
     title = "Welcome to NewsHub"
     return render_template('index.html', title=title, sources=sources)
+
+@app.route('/news')
+def news():
+    '''
+    View function that returns index page and its data
+    '''
+    
+    return render_template('news.html', title=title, )
