@@ -9,19 +9,19 @@ api_key = app.config['API_KEY']
 #Get the base url
 base_url = app.config["API_SOURCES_URL"]
 
-def get_news(group):
+def get_news(sources):
     '''
     Function that will get format url
     '''
-    get_news_url = base_url.format(group,api_key)
+    get_news_url = base_url.format(sources, api_key)
     with urllib.request.urlopen(get_news_url) as url:
         get_data = url.read()
         get_response = json.loads(get_data)
         
         results = None
         
-        if get_response['articles']:
-            results_list = get_response['articles']
+        if get_response['sources']:
+            results_list = get_response['sources']
             results = process_news(results_list)
     return results
 
@@ -32,12 +32,10 @@ def process_news(news_List):
     news_list=[]
     for item in news_List:
         id = item.get('id')
-        title = item.get('title')
+        name = item.get('name')
         description = item.get('description')
         url = item.get('url')
-        urlToImage = item.get('urlToImage')
-        publishedAt = item.get('publishedAt')
-        content = item.get('content')
-        news_object = News(id, title, description, url, urlToImage, publishedAt, content)
+        category = item.get('category')
+        news_object = News(id, name, description, url, category)
         news_list.append(news_object)
     return news_list
