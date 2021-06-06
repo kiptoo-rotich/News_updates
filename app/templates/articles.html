@@ -1,0 +1,21 @@
+{% extends "bootstrap/base.html"%}
+{%include 'navbar.html'%}
+{%block title%}
+{{title}}
+{%endblock%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-3 col-lg-3">
+            <h1>News articles</h1>
+            {% for article in general%}
+            <li><img src="{{article.urlToImage}}" alt=""></li>
+            <li>{{article.description}}</li>
+            <li>{{article.publishedAt}}</li>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+</ul>
+{%endblock %}
