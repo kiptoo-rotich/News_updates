@@ -18,5 +18,5 @@ def news():
     '''
     View function that returns index page and its data
     '''
-    
-    return render_template('news.html', title=title, )
+    description = get_details(id)
+    return render_template('news.html', title=title)
