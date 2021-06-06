@@ -8,3 +8,17 @@ class News:
         self.description = description
         self.url = url
         self.category = category
+
+class News_details:
+    '''
+    Class to define news_details objects
+    '''
+    def __init__(self, id, name, description, url, category, urlToImage, publishedAt, content):
+        self.id = id
+        self.name = name
+        self.description = description
+        self.url = url
+        self.category = category
+        self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
+        self.content = content
