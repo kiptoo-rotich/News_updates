@@ -8,8 +8,9 @@
 </head>
 <body>
     <ul>
-        {% for item in top_headlines %}
-            <li>{{item.title}}</li>
+        <h1>News sources</h1>
+        {% for item in sources %}
+            <li>{{item.name}}</li>
         {% endfor %}
     </ul>
 </body>
