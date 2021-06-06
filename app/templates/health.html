@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html"%}
+{%include 'navbar.html'%}
+{% block styles %}
+{{super()}}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital@1&family=Volkhov&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Spectral:ital@1&family=Volkhov&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+    href="https://fonts.googleapis.com/css2?family=Handlee&family=Lemonada:wght@700&family=Spectral:ital@1&family=Volkhov&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('.static', filename='page.css')}}">
+{% endblock %}
+{%block title%}
+{{title}}
+{%endblock%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <h1>HEALTH NEWS</h1>
+        <div class="">
+            {% for health in health%}
+            <li><img src="{{health.urlToImage}}" alt=""></li>
+            <li>{{health.description}}</li>
+            <li>{{health.content}}</li>
+            <li>{{health.author}}</li>
+            <li class="time"><em>{{health.publishedAt}}</em></li>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+</ul>
+{%endblock %}

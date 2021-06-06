@@ -47,14 +47,14 @@ def get_articles(articles):
         get_article_data = url.read()
         article_response = json.loads(get_article_data)
         
-        if article_response["articles"]:
-            articles_list = article_response["articles"]
+        if article_response['articles']:
+            articles_list = article_response['articles']
             article_results = process_articles(articles_list)
     return article_results
 
-def process_articles(articles_list):
+def process_articles(articles_List):
     articles_list = []
-    for article in articles_list:
+    for article in articles_List:
         id = article.get('id')
         title = article.get('title')
         description = article.get('description')
