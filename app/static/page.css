@@ -1,0 +1,30 @@
+li {
+    list-style: none;
+    font-size: 22px;
+    font-family: 'Volkhov', serif;
+    font-weight: 450;
+}
+
+img {
+    width: 40%;
+}
+
+hr {
+    color: blue;
+}
+
+.time {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Handlee', cursive;
+}
+
+h1 {
+    font-size: 40px;
+    color: darkslategrey;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    font-family: 'Lemonada', cursive;
+}
