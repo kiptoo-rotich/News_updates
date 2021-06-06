@@ -1,6 +1,6 @@
 from app import app
 import urllib.request,json
-from .models import News
+from .models import News, News_details
 
 
 #Get api key/SOURCES
@@ -41,12 +41,26 @@ def process_news(news_List):
         news_list.append(news_object)
     return news_list
 
-def get_details(id):
-    get_news_details = api_url.format(id, api_key)
-    
-    with urllib.urlopen(get_news_details) as url:
-        news_details  url.read()
-        news_response = json.loads(news_details)
+def get_articles(articles):
+    get_news_articles = api_url.format(articles, api_key)
+    with urllib.request.urlopen(get_news_articles) as url:
+        get_article_data = url.read()
+        article_response = json.loads(get_article_data)
         
-        if news_response:
-            
+        if article_response["articles"]:
+            articles_list = article_response["articles"]
+            article_results = process_articles(articles_list)
+    return article_results
+
+def process_articles(articles_list):
+    articles_list = []
+    for article in articles_list:
+        id = article.get('id')
+        title = article.get('title')
+        description = article.get('description')
+        urlToImage = article.get('urlToImage')
+        publishedAt = article.get('publishedAt')
+        content = article.get('content')
+        article_object = News_details(id,title, description,urlToImage,publishedAt, content)
+        articles_list.append(article_object)
+    return articles_list
