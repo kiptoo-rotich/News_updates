@@ -9,14 +9,11 @@ img {
     width: 40%;
 }
 
-hr {
-    color: blue;
-}
-
 .time {
     font-size: 18px;
     font-weight: 500;
     font-family: 'Handlee', cursive;
+    text-decoration: underline;
 }
 
 h1 {

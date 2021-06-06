@@ -2,11 +2,15 @@
     list-style: none;
     font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 40px
+    line-height: 40px;
+    padding-left: 4px;
 }
 
 .sources {
     column-count: 4;
+    background-color: rgb(231, 236, 241);
+    padding: 3%;
+    column-rule: 4px solid white;
 }
 
 h1 {
