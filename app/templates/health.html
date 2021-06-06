@@ -20,12 +20,12 @@
 <div class="container">
     <div class="row">
         <h1>HEALTH NEWS</h1>
-        <div class="">
+        <div class="column">
             {% for health in health%}
             <li><img src="{{health.urlToImage}}" alt=""></li>
             <li>{{health.description}}</li>
             <li>{{health.content}}</li>
-            <li>{{health.author}}</li>
+            <li class="author">Author: {{health.author}}</li>
             <li class="time"><em>{{health.publishedAt}}</em></li>
             <hr>
             {% endfor %}

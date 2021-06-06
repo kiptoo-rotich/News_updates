@@ -1,9 +1,11 @@
+import os
 class Config:
     '''
     Parent configuration class
     '''
     API_SOURCES_URL = 'https://newsapi.org/v2/{}?apiKey={}'
     API_URL = 'https://newsapi.org/v2/everything?q={}&apiKey={}'
+    
 
 class ProdConfig(Config):
     '''
@@ -21,3 +23,4 @@ class DevConfig(Config):
         Config:The parent configuration class
     '''
     DEBUG = True
+   

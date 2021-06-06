@@ -1,5 +1,6 @@
 from flask import Flask
 from config import DevConfig
+# from app import views, error
 from flask_bootstrap import Bootstrap
 
 bootstrap = Bootstrap()

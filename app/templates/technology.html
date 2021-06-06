@@ -20,12 +20,12 @@
 <div class="container">
     <div class="row">
         <h1>TECHNOLOGY NEWS</h1>
-        <div class="">
+        <div class="column">
             {% for technology in technology%}
             <li><img src="{{technology.urlToImage}}" alt=""></li>
             <li>{{technology.description}}</li>
             <li>{{technology.content}}</li>
-            <li>{{technology.author}}</li>
+            <li class="author">Author: {{technology.author}}</li>
             <li class="time"><em>{{technology.publishedAt}}</em></li>
             <hr>
             {% endfor %}

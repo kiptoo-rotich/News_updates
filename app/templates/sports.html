@@ -20,12 +20,12 @@
 <div class="container">
     <div class="row">
         <h1>SPORTS NEWS</h1>
-        <div class="">
+        <div class="column">
             {% for sports in sports%}
             <li><img src="{{sports.urlToImage}}" alt=""></li>
             <li>{{sports.description}}</li>
             <li>{{sports.content}}</li>
-            <li>{{sports.author}}</li>
+            <li class="author">Author: {{sports.author}}</li>
             <li class="time"><em>{{sports.publishedAt}}</em></li>
             <hr>
             {% endfor %}

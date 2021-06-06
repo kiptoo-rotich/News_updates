@@ -20,12 +20,12 @@
 <div class="container">
     <div class="row">
         <h1>BUSINESS NEWS</h1>
-        <div class="">
+        <div class="column">
             {% for business in business%}
             <li><img src="{{business.urlToImage}}" alt=""></li>
             <li>{{business.description}}</li>
             <li>{{business.content}}</li>
-            <li>{{business.author}}</li>
+            <li class="author">Author: {{business.author}}</li>
             <li class="time"><em>{{business.publishedAt}}</em></li>
             <hr>
             {% endfor %}

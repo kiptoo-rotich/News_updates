@@ -20,12 +20,12 @@
 <div class="container">
     <div class="row">
         <h1>ENTERTAINMENT NEWS</h1>
-        <div class="">
+        <div class="column">
             {% for entertainment in entertainment%}
             <li><img src="{{entertainment.urlToImage}}" alt=""></li>
             <li>{{entertainment.description}}</li>
             <li>{{entertainment.content}}</li>
-            <li>{{entertainment.author}}</li>
+            <li class="author">Author: {{entertainment.author}}</li>
             <li class="time"><em>{{entertainment.publishedAt}}</em></li>
             <hr>
             {% endfor %}

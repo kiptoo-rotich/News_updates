@@ -3,10 +3,11 @@ li {
     font-size: 22px;
     font-family: 'Volkhov', serif;
     font-weight: 450;
+    padding: 10px;
 }
 
 img {
-    width: 40%;
+    width: 100%;
 }
 
 .time {
@@ -14,6 +15,7 @@ img {
     font-weight: 500;
     font-family: 'Handlee', cursive;
     text-decoration: underline;
+    color: gray;
 }
 
 h1 {
@@ -24,4 +26,15 @@ h1 {
     text-transform: uppercase;
     margin-bottom: 2%;
     font-family: 'Lemonada', cursive;
+}
+
+.column{
+    column-count: 2;
+    column-rule: 3px solid black;
+}
+
+.author{
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
 }
