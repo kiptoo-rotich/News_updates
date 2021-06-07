@@ -5,7 +5,7 @@ class Config:
     '''
     API_SOURCES_URL = 'https://newsapi.org/v2/{}?apiKey={}'
     API_URL = 'https://newsapi.org/v2/everything?q={}&apiKey={}'
-    
+    SECRET_KEY = 'qwerty'
 
 class ProdConfig(Config):
     '''
@@ -24,3 +24,7 @@ class DevConfig(Config):
     '''
     DEBUG = True
    
+config_options = {
+'development':DevConfig,
+'production':ProdConfig
+}
