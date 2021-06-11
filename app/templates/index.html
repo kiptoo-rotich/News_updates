@@ -4,10 +4,13 @@
 {% block styles %}
 {{super()}}
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital@1&family=Volkhov&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&family=Spectral:ital@1&family=Volkhov&display=swap"
+    rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link
-    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Bad+Script&family=Castoro:ital@1&family=Courgette&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Handlee&family=Lemonada:wght@700&family=Spectral:ital@1&family=Volkhov&display=swap"
     rel="stylesheet">
 <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
 {% endblock %}
@@ -17,13 +20,13 @@
 {%endblock%}
 {%block content%}
 <div class="container">
-    <h1>News sources</h1>
+    <h1>Your trusted News sources</h1>
     <div class="row">
         <div class="column">
             <ul class="sources">
                 {% for item in sources %}
-                <li class="sourcelist title"><a href="{{item.url}}">{{item.name}}</a></li>
-                <li class="sourcelist list">{{item.description}}</li><hr>
+                <li class="sourcelist title">{{item.name}}</li>
+                <li class="sourcelist list">{{item.description}} <a href="{{item.url}}">Visit this website</a></li><hr>
                 {% endfor %}
             </ul>
         </div>
